@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block content %}
+{% if not session.logged_in %}
+		<h2>No esta validado</h2>
+	{% elif not session.unit %}
+		<h2>Error de comunicacion</h2>
+	{% else %}
+		<table id=unit>
+			<tr>
+				<td colspan=2>{{ session.unit }}</td>
+				<td colspan=2>{{ session.marktime }}</td>
+			</tr>
+			<tr>
+				{% set a = 0 %}
+				{% for element in session.telemetry %}
+					<td>{{ element }}</td>
+					{% set a = a + 1 %}
+					{% if a == 4 %}
+						{% set a = 0 %}
+						</tr><tr>
+					{% endif %}
+				{% endfor %}
+			</tr>
+		</table>
+{% endif %}
+{% endblock %}

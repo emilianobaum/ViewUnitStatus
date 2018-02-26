@@ -1,0 +1,23 @@
+
+<head>
+	{% block head %}
+	<link rel="stylesheet" href="style.css" />
+	<title>{% block title %}{% endblock %} - Unit Status Viewer</title>
+	{% endblock %}
+</head>
+<body>
+	<div id="header"> Welcome {{ session.username }} </div>
+	<h1> <center>Visor de estado de unidades</center></h1>
+	<h2>Trabaja en conjunto con la unidad de monitoreo y almacenamiento de datos </h2>
+	<div id="content">
+		{% block content %}
+		Estado de la unidad.
+		{% endblock %}
+	</div>
+	<div id="footer">
+		{% block footer %}
+		&copy; Copyright 2008 by Emiliano A. Baum 
+		{% endblock %}
+	</div>
+</body>
+
