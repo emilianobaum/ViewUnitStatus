@@ -47,6 +47,7 @@ def logout():
 def unit_status():
     try:
         telemetry = retrieve_unit_status()
+        print("Telemetry: ",telemetry)
         session['marktime'] = telemetry.split('|')[0] 
         session['unit'] = telemetry.split('|')[1]
         session['telemetry'] = (telemetry.split('|')[2]).split(';')
