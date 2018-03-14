@@ -1,0 +1,20 @@
+{"Unit Status Configuration":{
+	"web":{
+		"host":"localhost",
+		"port":7001
+		},
+	"server unit":{
+		"host":"localhost",
+		"port":12345
+		},
+	"program structure":{
+		"static": "static",
+		"templates":"templates",
+		"logs":"logs"
+		},
+	"security":{
+		"username":"soporte",
+		"password":"cgss"
+		}
+	 }
+}
